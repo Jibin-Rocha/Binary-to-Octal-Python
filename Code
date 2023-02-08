@@ -1,0 +1,62 @@
+def bintoOct(b):
+    while len(b)%3 != 0:
+        b = "0" + b
+
+    gp = 0
+    mylist = []
+    duration = len(b)/3
+    while duration != 0:
+        temp = b[gp:gp+3]
+        mylist.append(temp)
+        gp = gp +3
+        duration = duration -1
+
+    Oct = ""
+    for i in mylist:
+        if(i == "000"):
+            Oct = Oct + "0"
+        elif(i == "001"):
+            Oct = Oct + "1"
+        elif (i == "010"):
+            Oct = Oct + "2"
+        elif (i == "011"):
+            Oct = Oct + "3"
+        elif (i == "100"):
+            Oct = Oct + "4"
+        elif (i == "101"):
+            Oct = Oct + "5"
+        elif (i == "110"):
+            Oct = Oct + "6"
+        elif (i == "111"):
+            Oct = Oct + "7"
+
+    return Oct
+
+
+
+
+
+while True:
+    binary = str(input("enter the binary number : "))
+    print("you entered ",binary)
+    print(type(binary))
+    if ("2" in binary):
+        print("invalid")
+    elif("3" in binary):
+        print("invalid")
+    elif ("4" in binary):
+        print("invalid")
+    elif ("5" in binary):
+        print("invalid")
+    elif ("6" in binary):
+        print("invalid")
+    elif ("7" in binary):
+        print("invalid")
+    elif ("8" in binary):
+        print("invalid")
+    elif ("9" in binary):
+        print("invalid")
+    else:
+        print("Valid Input")
+        octal = bintoOct(binary)
+        print("The Octal equivalent of",binary,"is",octal)
